@@ -326,6 +326,7 @@ class JsPacman extends Game {
             this._destroyBonus = 25;
             this.model.addScore(parseInt(bonus.score));
             this.sound.play('bonus');
+            this.model.lives = this.model.lives + 3;
         });
 
         this.addSprite(this.bonus);
@@ -373,7 +374,7 @@ class JsPacman extends Game {
             y : inkyTile.y
         });
 
-        this.addEventListenersToGhost(this.inky);
+        //this.addEventListenersToGhost(this.inky);
 
         this.addSprite(this.inky);
 
@@ -384,7 +385,7 @@ class JsPacman extends Game {
             y : sueTile.y
         });
 
-        this.addEventListenersToGhost(this.sue);
+        //this.addEventListenersToGhost(this.sue);
 
         this.addSprite(this.sue);
 
@@ -471,8 +472,8 @@ class JsPacman extends Game {
 
                 this.pinky.move();
                 this.blinky.move();
-                this.inky.move();
-                this.sue.move();
+                //this.inky.move();
+                //this.sue.move();
 
                 if (this._destroyBonus) {
                     if (this._destroyBonus === 1) {
@@ -703,8 +704,7 @@ class JsPacman extends Game {
             <div class="sound-status on" style="display: none"><span class="wrap">SOUND: <span class="on">ON</span><span class="off">OFF</span></span></div>
             <div class="paused" style="display: none"><span class="wrap">PAUSED</span></div>
             <div class="splash">
-                <span class="title">"JS PAC-MAN"</span>
-                <p class="nerd">HTML - CSS<br><br><span>JAVASCRIPT</span></p>
+                <p class="nerd">PAC-MAN FRIENDS<br><br><span>BY HENRY</span></p>
                 <a class="start" style="display: none">START</a>
                 <div class="loadbar"><div class="inner"></div></div>
                 <p class="keys"><span>&larr;&uarr;&darr;&rarr;</span>:MOVE <span>S</span>:SOUND <span>P</span>:PAUSE</p>
